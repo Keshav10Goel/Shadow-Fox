@@ -5,144 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keshav Goel | Portfolio</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="Portfolio.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- VIDEO BACKGROUND -->
-<div class="video-bg">
-  <video autoplay muted loop playsinline>
-    <source src="space-bg.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+  <!-- Video Background -->
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="assets/bg.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="overlay"></div>
 
-<!-- DARK OVERLAY -->
-<div class="video-overlay"></div>
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
 
-  <!-- NAVBAR -->
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
-  <img src="Logo.png" alt="Keshav Goel Logo">
-</div>
-
+      <img src="assets/logo.png" alt="KG Logo">
+    </div>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Project</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
+  <!-- Hero -->
   <section class="hero reveal">
     <h1>Keshav Goel</h1>
     <p class="tagline">Built on hustle, powered by curiosity.</p>
-    <p class="intro">
+    <p class="subtext">
       Second-year engineering student exploring tech, startups, and leadership —
-      learning fast, building early, moving with intent.
+      learning fast, building early, growing through real-world experience.
     </p>
 
-    <div class="hero-buttons">
-      <a href="#projects" class="btn ghost">View Work</a>
+    <div class="hero-actions">
+      <a href="#projects" class="btn primary">View My Work</a>
       <a href="#contact" class="btn ghost">Let’s Connect</a>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- About -->
   <section id="about" class="section reveal">
     <h2>About Me</h2>
-    <p>
-      I don’t wait for perfect moments — I build through motion.
-      From hackathons to startups to student leadership, I believe
-      growth comes from ownership, curiosity, and doing real work early.
-    </p>
+    <div class="glass">
+      <p>
+        I’m not waiting for opportunities to arrive in my final year.
+        I believe in learning by doing — hackathons, startups, student communities.
+        Curiosity and hustle drive everything I build.
+      </p>
+    </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- Skills -->
   <section id="skills" class="section reveal">
     <h2>Skills</h2>
-    <div class="cards">
+    <div class="grid">
       <div class="card">Python · Java · C</div>
       <div class="card">HTML · CSS · JavaScript</div>
       <div class="card">Git · VS Code · Canva</div>
     </div>
   </section>
 
-  <!-- PROJECT -->
+  <!-- Projects -->
   <section id="projects" class="section reveal">
-    <h2>Featured Project</h2>
-    <div class="project-card">
-      <h3>PolyView <span>Hackathon Project</span></h3>
+    <h2>Projects</h2>
+    <div class="card project">
+      <h3>PolyView <span>Hackground Hackathon</span></h3>
       <p>
         A web-based lie detection system analysing facial expressions
-        and voice modulation to infer deceptive behaviour in real time.
+        and voice modulation for behaviour-based inference.
       </p>
-      <p class="tech">HTML · CSS · JavaScript</p>
+      <div class="tags">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+      </div>
       <a href="https://keshav10goel.github.io/Polyview" target="_blank" class="btn primary">
-        View Live
+        View Live Demo
       </a>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- Experience -->
   <section id="experience" class="section reveal">
     <h2>Experience</h2>
     <div class="timeline">
-      <div class="timeline-item">
+      <div class="card">
         <h3>ProviderApp</h3>
         <p>Founder’s Office Intern — strategy & execution exposure.</p>
       </div>
-      <div class="timeline-item">
+      <div class="card">
         <h3>Parzel</h3>
         <p>Branding, sales, marketing & operations.</p>
       </div>
-      <div class="timeline-item">
+      <div class="card">
         <h3>BetterCar</h3>
-        <p>Dashboard management & PR coordination.</p>
+        <p>Dashboard management & PR responsibilities.</p>
       </div>
     </div>
   </section>
 
-  <!-- LEADERSHIP -->
-  <section class="section reveal">
-    <h2>Leadership</h2>
-    <div class="card highlight">
-      Co-Head Organiser — <strong>Shrinik (CSE Dept Club)</strong>
-    </div>
-  </section>
-
-  <!-- ACHIEVEMENT -->
-  <section class="section reveal">
-    <h2>Achievements</h2>
-    <div class="card highlight">
-      🏆 Reliance Foundation Scholar
-    </div>
-  </section>
-
-  <!-- CONTACT -->
+  <!-- Contact -->
   <section id="contact" class="section reveal">
-    <h2>Contact</h2>
-    <p>Got an idea, opportunity, or just want to connect?</p>
-
-    <div class="contact-links">
-      <a href="mailto:kesavgoel10@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/keshav-goel-9663a332a/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Keshav10Goel" target="_blank">GitHub</a>
+    <h2>Let’s Connect</h2>
+    <div class="contact-grid">
+      <div class="glass">
+        <p>Email: kesavgoel10@gmail.com</p>
+        <p>LinkedIn: linkedin.com/in/keshav-goel</p>
+        <p>GitHub: github.com/Keshav10Goel</p>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     Keep Hustling!
   </footer>
 
-  <!-- JS -->
-  <script src="Portfolio.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
