@@ -130,3 +130,14 @@ footer {
   padding: 30px;
   color: var(--muted);
 }
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4f8cff, #6cffc2);
+  width: 0;
+  z-index: 9999;
+}
+
+
