@@ -1,0 +1,259 @@
+:root {
+  --bg: #0b0e14;
+  --card: rgba(255, 255, 255, 0.06);
+  --text: #eaeaf0;
+  --muted: #a1a1b3;
+  --accent: #6cffc2;
+  --accent2: #7aa2ff;
+  --border: rgba(255,255,255,0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VIDEO BACKGROUND */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  overflow: hidden;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(6, 8, 20, 0.75),
+    rgba(6, 8, 20, 0.9)
+  );
+  z-index: -2;
+}
+
+
+body {
+    
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #121726, #06070c);
+  color: var(--text);
+  line-height: 1.7;
+  
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(10,10,20,0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 8%;
+  z-index: 100;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+
+.logo {
+  font-weight: 800;
+}
+
+/* SECTIONS */
+.section {
+  padding: 90px 8%;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+p {
+  max-width: 750px;
+  color: var(--muted);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 0 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tagline {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #000;
+}
+
+.ghost {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #000; 
+  
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 25px;
+  border-radius: 18px;
+  transition: transform 0.7s;
+}
+
+.card:hover {
+  transform: scale(1.05) translateY(-6px);
+  size-adjust:initial(1.25) ;
+  border-color: linear-gradient(135deg, var(--accent), var(--accent2)); 
+}
+
+.highlight {
+  font-weight: 600;
+}
+
+/* PROJECT */
+.project-card span {
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.tech {
+  margin: 10px 0;
+}
+
+/* TIMELINE */
+.timeline {
+  display: grid;
+  gap: 20px;
+}
+
+.timeline-item {
+  padding-left: 15px;
+  border-left: 2px solid var(--accent2);
+}
+
+/* CONTACT */
+.contact-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.contact-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+}
+.logo img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.logo img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(122, 162, 255, 0.8));
+}
+.navbar {
+  align-items: center;
+}
+.navbar {
+  align-items: center;
+}
+
