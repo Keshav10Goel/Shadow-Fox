@@ -14,12 +14,25 @@
   box-sizing: border-box;
 }
 
-body {
+
+  body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top, #121726, #06070c);
   color: var(--text);
   line-height: 1.7;
+
+  /* 🌌 Space background */
+  background:
+    linear-gradient(
+      rgba(8, 10, 20, 0.85),
+      rgba(8, 10, 20, 0.95)
+    ),
+    url("space-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
 
 /* NAVBAR */
 .navbar {
@@ -199,3 +212,4 @@ footer {
     font-size: 2.6rem;
   }
 }
+
